@@ -3,4 +3,8 @@ import {render} from 'react-dom';
 
 import App from '@layouts/App';
 
-render(<App />, document.querySelector('#app'));
+render(  
+  <BrowserRouter>
+    <App />
+  </BrowserRouer>, 
+  document.querySelector('#app'));
