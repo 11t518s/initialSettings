@@ -5,9 +5,10 @@ declare const module: any;
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  await app.listen(1101);
+  const PORT = process.env.PORT;
+  await app.listen(PORT);
 
-  console.log('tt123');
+  console.log(`hello this is ${PORT} port`);
   if (module.hot) {
     module.hot.accept();
     module.hot.dispose(() => app.close());
